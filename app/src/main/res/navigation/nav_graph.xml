@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash">
+
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.awesomenessstudios.schoolprojects.kiddolingo.Splash"
+        android:label="fragment_studio_splash"
+        tools:layout="@layout/fragment_studio_splash" >
+        <action
+            android:id="@+id/action_splash_to_appSplash"
+            app:destination="@id/appSplash" />
+    </fragment>
+    <fragment
+        android:id="@+id/appSplash"
+        android:name="com.awesomenessstudios.schoolprojects.kiddolingo.ui.AppSplash"
+        android:label="fragment_app_splash"
+        tools:layout="@layout/fragment_app_splash" >
+        <action
+            android:id="@+id/action_appSplash_to_parentSignIn"
+            app:destination="@id/parentSignIn" />
+        <action
+            android:id="@+id/action_appSplash_to_parentHome"
+            app:destination="@id/parentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentSignIn"
+        android:name="com.awesomenessstudios.schoolprojects.kiddolingo.ui.auth.ParentSignIn"
+        android:label="fragment_parent_sign_in"
+        tools:layout="@layout/fragment_parent_sign_in" >
+        <action
+            android:id="@+id/action_parentSignIn_to_parentSignUp"
+            app:destination="@id/parentSignUp" />
+        <action
+            android:id="@+id/action_parentSignIn_to_parentHome"
+            app:destination="@id/parentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentSignUp"
+        android:name="com.awesomenessstudios.schoolprojects.kiddolingo.ui.auth.ParentSignUp"
+        android:label="fragment_parent_sign_up"
+        tools:layout="@layout/fragment_parent_sign_up" >
+        <action
+            android:id="@+id/action_parentSignUp_to_parentSignIn"
+            app:destination="@id/parentSignIn" />
+        <action
+            android:id="@+id/action_parentSignUp_to_addKids"
+            app:destination="@id/addKids" />
+    </fragment>
+    <fragment
+        android:id="@+id/addKids"
+        android:name="com.awesomenessstudios.schoolprojects.kiddolingo.ui.auth.AddKids"
+        android:label="fragment_add_kids"
+        tools:layout="@layout/fragment_add_kids" >
+        <argument
+            android:name="noOfChildren"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addKids_to_parentHome"
+            app:destination="@id/parentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentHome"
+        android:name="com.awesomenessstudios.schoolprojects.kiddolingo.ui.home.ParentHome"
+        android:label="fragment_parent_home"
+        tools:layout="@layout/fragment_parent_home" >
+        <action
+            android:id="@+id/action_parentHome_self"
+            app:popUpTo="@id/parentHome" />
+        <action
+            android:id="@+id/action_parentHome_to_childHome"
+            app:destination="@id/childHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/childHome"
+        android:name="com.awesomenessstudios.schoolprojects.kiddolingo.ui.child.ChildHome"
+        android:label="fragment_child_home"
+        tools:layout="@layout/fragment_child_home" >
+        <argument
+            android:name="child"
+            app:argType="com.awesomenessstudios.schoolprojects.kiddolingo.models.Child" />
+        <action
+            android:id="@+id/action_childHome_to_rules"
+            app:destination="@id/rules" />
+        <action
+            android:id="@+id/action_childHome_to_parentSignIn"
+            app:destination="@id/parentSignIn" />
+    </fragment>
+    <fragment
+        android:id="@+id/rules"
+        android:name="com.awesomenessstudios.schoolprojects.kiddolingo.ui.game.Rules"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" >
+        <argument
+            android:name="difficulty"
+            app:argType="string" />
+        <argument
+            android:name="child"
+            app:argType="com.awesomenessstudios.schoolprojects.kiddolingo.models.Child" />
+        <action
+            android:id="@+id/action_rules_to_digitalInkMainActivity"
+            app:destination="@id/digitalInkMainActivity" />
+        <argument
+            android:name="gameDetails"
+            app:argType="com.awesomenessstudios.schoolprojects.kiddolingo.models.GameScoreDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/digitalInkMainActivity"
+        android:name="com.awesomenessstudios.schoolprojects.kiddolingo.ui.game.Game"
+        android:label="DigitalInkMainActivity" >
+        <argument
+            android:name="difficulty"
+            app:argType="string" />
+        <argument
+            android:name="child"
+            app:argType="com.awesomenessstudios.schoolprojects.kiddolingo.models.Child" />
+        <action
+            android:id="@+id/action_digitalInkMainActivity_to_quizDone"
+            app:destination="@id/quizDone" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizDone"
+        android:name="com.awesomenessstudios.schoolprojects.kiddolingo.ui.game.QuizDone"
+        android:label="fragment_quiz_done"
+        tools:layout="@layout/fragment_quiz_done" >
+        <argument
+            android:name="gameDetails"
+            app:argType="com.awesomenessstudios.schoolprojects.kiddolingo.models.GameDoneDetailsToParse" />
+        <action
+            android:id="@+id/action_quizDone_to_parentHome"
+            app:destination="@id/parentHome" />
+    </fragment>
+</navigation>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/electric_blue"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_midi"
+    tools:context=".ui.game.QuizDone">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_mini"
+        android:fontFamily="@font/jacques_francois_shadow_regular"
+        android:text="@string/game_over"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/game_over_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/padding_midi"
+        app:cardCornerRadius="@dimen/margin_mini"
+        app:cardElevation="@dimen/padding_mini">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_mini">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_mini"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/correct_words_title"
+                    android:textSize="@dimen/text_l"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/child_correct_words"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:text="@string/correct_words_title"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_l"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_mini"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wrong_words_title"
+                    android:textSize="@dimen/text_l"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/child_wrong_words"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:text="@string/correct_words_title"
+                    android:textColor="@color/crimson"
+                    android:textSize="@dimen/text_l"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_mini"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:gravity="center"
+                    android:text="@string/total_words"
+                    android:textSize="@dimen/text_l" />
+
+                <TextView
+                    android:id="@+id/child_total_no_words"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:textSize="@dimen/text_l"
+                    tools:text="13" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_mini"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:gravity="center"
+                    android:text="@string/total_score"
+                    android:textSize="@dimen/text_l" />
+
+                <TextView
+                    android:id="@+id/child_total_score"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:textSize="@dimen/text_l"
+                    tools:text="24 points" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_mini"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:gravity="center"
+                    android:text="@string/difficulty"
+                    android:textSize="@dimen/text_l" />
+
+                <TextView
+                    android:id="@+id/child_difficulty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:textSize="@dimen/text_l"
+                    tools:text="@string/easy" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_mini"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:gravity="center"
+                    android:text="@string/high_score_full"
+                    android:textSize="@dimen/text_l" />
+
+                <TextView
+                    android:id="@+id/child_high_score"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:textSize="@dimen/text_l"
+                    tools:text="24 points" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/game_over_okay_button"
+        android:layout_width="@dimen/button_width_xxl"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_over_card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="@dimen/margin_midi"
+        android:text="@string/btn_okay"
+        app:backgroundTint="@color/orange" />
+
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "316792928688",
+    "project_id": "kidddies-game",
+    "storage_bucket": "kidddies-game.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316792928688:android:e1b7a58503363fa32dfe75",
+        "android_client_info": {
+          "package_name": "com.awesomenessstudios.schoolprojects.kiddolingo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARpJOkRHgXnt07EWMG1mlejdKqLAsJfP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316792928688:android:93a4ffa9385d77952dfe75",
+        "android_client_info": {
+          "package_name": "kiddiesgame.kotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARpJOkRHgXnt07EWMG1mlejdKqLAsJfP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

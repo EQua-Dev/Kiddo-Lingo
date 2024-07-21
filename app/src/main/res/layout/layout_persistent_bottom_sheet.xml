@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1E1F4"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="@dimen/dimen_60"
+    app:cardCornerRadius="@dimen/dimen_16"
+    app:cardElevation="@dimen/dimen_4"
+    android:layout_margin="@dimen/dimen_4"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_4"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="#999"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_plate_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_size_24"
+            tools:text="CX899ABC" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_4"
+            android:background="@drawable/auth_inner_bg"
+            app:cardCornerRadius="@dimen/dimen_4"
+            app:cardElevation="@dimen/dimen_4">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/car_model_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/txt_plate_number">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_car_model" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/car_model_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_car_model" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/car_color_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/car_model_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_car_color" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/car_color_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_car_color" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/driver_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/car_color_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_driver_name" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/driver_name_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_driver_name" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/driver_gender_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/driver_name_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_driver_gender" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/driver_gender_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_driver_gender" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/state_of_origin_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/driver_gender_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_state_of_origin" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/state_of_origin_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_state_of_origin" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/driver_dob_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/state_of_origin_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_dob" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/dob_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_dob" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/driver_blood_group_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/driver_dob_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_driver_blood_group" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/driver_blood_group_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_driver_blood_group" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/driver_phone_number_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/driver_blood_group_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_driver_phone_number" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/driver_phone_number_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_driver_phone_number" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/license_number_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/driver_phone_number_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_license_number" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/license_number_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_license_number" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/license_class_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/license_number_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_license_class" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/license_class_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_license_class" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/license_doi_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/license_class_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_license_doi" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/license_doi_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_license_doi" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/license_doe_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/license_doi_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_license_doe" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/license_doe_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_license_doe" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/license_soi_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/license_doe_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_license_soi" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/license_soi_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_license_soi" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/driver_nok_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/license_soi_layout">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_driver_nok_name" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/driver_nok_name_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_driver_nok_name" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/driver_nok_phone_number_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_4"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    android:weightSum="3">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="@string/txt_driver_nok_phone_number" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/driver_nok_phone_number_txt"
+                        style="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        tools:text="@string/txt_driver_nok_phone_number" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_ok"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="@dimen/dimen_4"-->
+<!--            android:text="@string/btn_okay" />-->
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

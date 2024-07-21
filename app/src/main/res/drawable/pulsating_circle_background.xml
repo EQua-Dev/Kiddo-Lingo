@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/circle_color" /> <alpha android:fromAlpha="1.0"
+            android:toAlpha="0.0"
+            android:duration="1000" android:repeatCount="infinite"
+            android:repeatMode="reverse" />
+        </shape>
+    </item>
+
+</layer-list>

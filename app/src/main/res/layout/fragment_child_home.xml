@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.child.ChildHome">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/home_custom_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_mini"
+            android:elevation="4dp"
+            app:menu="@menu/menu_main"
+            app:title="@string/app_name" />
+
+        <FrameLayout
+            android:id="@+id/card_security_banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/home_custom_tool_bar">
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/security_tips_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_mini"/>
+
+
+        </FrameLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_security_banner"
+            android:layout_margin="@dimen/margin_mini"
+            android:padding="@dimen/padding_mini"
+            app:cardElevation="@dimen/padding_mini"
+            app:strokeColor="@android:color/transparent"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_mini">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_mini"
+                    tools:text="Charles Anwurum"
+                    android:id="@+id/child_name"
+                    android:fontFamily="@font/jacques_francois_shadow_regular"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_l" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_margin="@dimen/padding_minute"
+                        tools:text="Charles Anwurum"
+                        android:id="@+id/child_category"
+                        android:fontFamily="@font/jacques_francois_shadow_regular"
+                        android:textAlignment="center"
+                        />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/padding_minute"
+                        tools:text="Charles Anwurum"
+                        android:id="@+id/child_category_range"
+                        android:fontFamily="@font/jmdh_regular"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_l"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_minute"
+                    tools:text="Charles Anwurum"
+                    android:id="@+id/child_category_description"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_xs"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_difficulty"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/margin_midi"
+                    android:textSize="@dimen/text_l"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_mini"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_mini"
+                    android:weightSum="9">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/home_card_easy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/padding_mini"
+                        android:layout_weight="3"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardElevation="@dimen/padding_mini">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_mini">
+
+                            <TextView
+                                android:id="@+id/txt_easy_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/padding_mini"
+                                android:text="@string/easy"
+                                android:gravity="center"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/text_xl"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/jmdh_regular"/>
+
+                            <LinearLayout
+                                android:id="@+id/layout_easy_high_score"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_easy_title"
+                                android:layout_marginTop="@dimen/margin_mini"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/padding_mini"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="@string/high_score" />
+
+                                <TextView
+                                    android:id="@+id/easy_high_score"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:text="10" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_easy_leaderboard_rank"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_easy_high_score"
+                                android:layout_marginTop="@dimen/margin_mini"
+                                android:layout_marginBottom="@dimen/margin_mini"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/padding_mini"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="@string/last_score_short" />
+
+                                <TextView
+                                    android:id="@+id/easy_leader_board"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:text="1" />
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/home_card_medium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/padding_mini"
+                        android:layout_weight="3"
+                        app:cardBackgroundColor="@color/orange"
+                        android:padding="@dimen/padding_mini"
+                        app:cardElevation="@dimen/padding_mini">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_mini">
+
+                            <TextView
+                                android:id="@+id/txt_medium_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/padding_mini"
+                                android:text="@string/medium"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:fontFamily="@font/jmdh_regular"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_xl" />
+
+                            <LinearLayout
+                                android:id="@+id/layout_medium_high_score"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_medium_title"
+                                android:layout_marginTop="@dimen/margin_mini"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/padding_mini"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="@string/high_score" />
+
+                                <TextView
+                                    android:id="@+id/medium_high_score"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:text="10" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_medium_leaderboard_rank"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_medium_high_score"
+                                android:layout_marginTop="@dimen/margin_mini"
+                                android:layout_marginBottom="@dimen/margin_mini"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/padding_mini"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="@string/last_score_short" />
+
+                                <TextView
+                                    android:id="@+id/medium_leader_board"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:text="1" />
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/home_card_hard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/padding_mini"
+                        android:layout_weight="3"
+                        app:cardBackgroundColor="@color/crimson"
+                        app:cardElevation="@dimen/padding_mini">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_mini">
+
+                            <TextView
+                                android:id="@+id/txt_hard_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/padding_mini"
+                                android:text="@string/hard"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_xl"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/jmdh_regular"
+                                android:textStyle="bold"/>
+
+                            <LinearLayout
+                                android:id="@+id/layout_hard_high_score"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_hard_title"
+                                android:layout_marginTop="@dimen/margin_mini"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/padding_mini"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="@string/high_score" />
+
+                                <TextView
+                                    android:id="@+id/hard_high_score"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:text="10" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_hard_leaderboard_rank"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_hard_high_score"
+                                android:layout_marginTop="@dimen/margin_mini"
+                                android:layout_marginBottom="@dimen/margin_mini"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/padding_mini"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="@string/last_score_short" />
+
+                                <TextView
+                                    android:id="@+id/hard_leader_board"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:text="1" />
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/home_random_difficulty_btn"
+                    android:layout_width="@dimen/button_width_xxl"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="@dimen/margin_mini"
+                    android:layout_marginVertical="@dimen/padding_minute"
+                    app:backgroundTint="@color/electric_blue"
+                    android:text="@string/home_random_difficulty_btn"
+                    app:cornerRadius="@dimen/margin_mini" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/home_leaderboard_btn"
+                    android:layout_width="@dimen/button_width_xxl"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="@dimen/margin_mini"
+                    android:layout_marginVertical="@dimen/padding_minute"
+                    android:text="@string/action_leaderboard"
+                    app:backgroundTint="@color/electric_blue"
+                    app:cornerRadius="@dimen/margin_mini" />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

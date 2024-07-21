@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/margin_mini"
+    android:layout_margin="@dimen/padding_mini"
+    app:cardCornerRadius="@dimen/padding_midi"
+    app:cardElevation="@dimen/padding_mini">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_mini"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/child_card_child_name"
+                android:padding="@dimen/padding_mini"
+                android:fontFamily="@font/jmdh_regular"
+                android:textSize="@dimen/text_xl"
+                android:textStyle="bold"
+                tools:text="Nonso Diobi" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:id="@+id/child_card_child_age"
+                android:padding="@dimen/padding_mini"
+                android:fontFamily="@font/jmdh_regular"
+                android:textSize="@dimen/text_l"
+                tools:text="5 Years" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_mini"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/child_card_child_category"
+                android:padding="@dimen/padding_mini"
+                tools:text="Tiny Typers" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:id="@+id/child_card_child_category_age_range"
+                android:padding="@dimen/padding_mini"
+                tools:text="5 - 9 Years" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/child_card_child_last_played_date"
+            android:padding="@dimen/padding_midi"
+            tools:text="Last Played: Sun, 23 Jan, 2020" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

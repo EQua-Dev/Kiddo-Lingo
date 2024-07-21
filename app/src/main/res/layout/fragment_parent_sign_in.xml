@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/kiddo_lingo_background_screen"
+    tools:context=".ui.auth.ParentSignIn">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/common_signin_button_text"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dimen_32"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:id="@+id/sign_in_text"
+            android:textColor="@color/white"
+            android:fontFamily="@font/jmdh_regular"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_subtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="@dimen/dimen_32"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/jacques_francois_shadow_regular"
+            android:layout_below="@id/sign_in_text" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:strokeColor="@color/electric_blue"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:id="@+id/card_sign_in"
+            android:layout_marginHorizontal="@dimen/dimen_32"
+            android:padding="@dimen/padding_midi"
+            app:cardElevation="@dimen/dimen_4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_4"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_sign_in_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_mini"
+                    android:hint="@string/sign_in_email"
+                    app:boxStrokeColor="@color/electric_blue"
+                    app:hintTextColor="@color/electric_blue"
+                    android:paddingTop="@dimen/padding_midi">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sign_in_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/sign_in_email"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:labelFor="@id/sign_in_email" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_sign_in_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_mini"
+                    android:hint="@string/sign_in_password"
+                    app:boxStrokeColor="@color/electric_blue"
+                    app:hintTextColor="@color/electric_blue"
+                    android:paddingTop="8dp"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sign_in_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/sign_in_password"
+                        android:importantForAutofill="no"
+                        android:inputType="textPassword"
+                        android:labelFor="@id/sign_in_password" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/account_log_in_forgot_password_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_sign_in"
+            android:layout_margin="@dimen/padding_mini"
+            android:padding="@dimen/padding_mini"
+            android:layout_alignParentEnd="true"
+            android:text="@string/account_log_in_forgot_password_prompt"
+            android:fontFamily="@font/jmdh_regular"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_l" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/account_log_in_btn_login"
+            android:layout_width="@dimen/button_width_xl"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/account_log_in_forgot_password_prompt"
+            android:backgroundTint="@color/electric_blue"
+            app:cornerRadius="@dimen/padding_midi"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:padding="@dimen/padding_mini"
+            android:text="@string/sign_in_title" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_mini"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/account_log_in_btn_login"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:layout_gravity="center"
+                android:text="@string/new_here"
+                android:layout_marginHorizontal="@dimen/padding_midi"
+                android:textColor="@color/white"
+                android:fontFamily="@font/jmdh_regular"
+                android:textSize="@dimen/text_s" />
+
+            <TextView
+                android:id="@+id/account_log_in_create_account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/create_account"
+                android:textColor="@color/electric_blue"
+                android:textStyle="bold"
+                android:fontFamily="@font/jacques_francois_shadow_regular"
+                android:textSize="@dimen/text_s" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+
+    <color name="circle_color">#D6A394</color>
+    <color name="electric_blue">#40E0D0</color>
+
+    <color name="crimson">#DC143C</color>
+    <color name="green">#4DB6AC</color>
+    <color name="orange">#FF8A65</color>
+
+</resources>

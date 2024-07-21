@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ParentHome">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Parent Home"
+            android:paddingHorizontal="@dimen/padding_midi"
+            android:layout_marginVertical="@dimen/padding_mini"
+            android:id="@+id/parent_greeting"
+            android:fontFamily="@font/jmdh_regular"
+            android:textSize="@dimen/text_xxl" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jacques_francois_shadow_regular"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_mini"
+            android:layout_margin="@dimen/margin_mini"
+            android:layout_below="@id/parent_greeting"
+            android:id="@+id/parent_home_children_title"
+            android:textSize="@dimen/text_xl" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_mini"
+            android:clipToPadding="false"
+            android:layout_below="@id/parent_home_children_title"
+            tools:listitem="@layout/item_parent_home_child_card_layout"
+            android:id="@+id/rv_children_list"
+            tools:itemCount="3"
+            />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

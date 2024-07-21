@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/electric_blue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txt_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/player_score"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+                <View
+                    android:id="@+id/pulsating_circle"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/pulsating_circle_background" />
+
+                <TextView
+                    android:id="@+id/txt_countdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/pulsating_circle"
+                    android:layout_alignBottom="@id/pulsating_circle"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_words_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/word_counter"
+                android:layout_below="@id/txt_score"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_s" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/paper_background">
+
+            <com.awesomenessstudios.schoolprojects.kiddolingo.DrawingView
+                android:id="@+id/drawing_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="4dp"
+                android:background="@android:color/transparent"
+                android:outlineProvider="bounds" />
+
+
+        </RelativeLayout>
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.awesomenessstudios.schoolprojects.kiddolingo.StatusTextView
+                    android:id="@+id/status_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status text..."
+                    android:textIsSelectable="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/txt_hint_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:text="@string/hint_description"
+                        android:padding="@dimen/padding_mini"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_xs" />
+
+
+                    <ImageView
+                        android:id="@+id/speak_word"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="end"
+                        android:layout_margin="4dp"
+                        android:padding="4dp"
+                        app:srcCompat="@drawable/ic_speak" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+                    <!--                <Button-->
+                    <!--                    android:id="@+id/download_button"-->
+                    <!--                    android:layout_width="0dp"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_weight="1"-->
+                    <!--                    android:onClick="downloadClick"-->
+                    <!--                    android:text="Download" />-->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/recognize_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="@dimen/padding_mini"
+                        app:backgroundTint="@color/green"
+                        android:text="@string/submit"
+                        app:cornerRadius="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/clear_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/padding_mini"
+                        android:layout_weight="1"
+                        app:backgroundTint="@color/orange"
+                        android:text="Clear"
+                        app:cornerRadius="8dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/languages_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/delete_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="deleteClick"
+                    android:text="Delete model"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_word_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@tools:sample/lorem/random"
+                    android:textAlignment="center"
+                    android:padding="@dimen/padding_mini"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="@dimen/padding_mini"
+                    android:layout_marginHorizontal="@dimen/padding_mini"
+                    android:justificationMode="inter_word"
+                    android:textSize="@dimen/text_s" />
+
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <!--<include layout="@layout/layout_persistent_bottom_sheet" />-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,107 @@
+<resources>
+    <!--    <string name="app_name" translatable="false">ML Kit Digital Ink Recognition Demo</string>-->
+    <string name="app_name" translatable="false">Kiddo Lingo</string>
+    <string name="title_activity_main" translatable="false">ML Kit Digital Ink Recognition Demo</string>
+    <string name="clear" translatable="false">Clear</string>
+    <string name="txt_plate_number">"Plate Number: "</string>
+    <string name="txt_car_model">"Car Model: "</string>
+    <string name="txt_car_color">"Car Color: "</string>
+    <string name="txt_driver_name">"Driver Name: "</string>
+    <string name="txt_state_of_origin">"State of Origin: "</string>
+    <string name="txt_driver_gender">"Gender: "</string>
+    <string name="txt_dob">"Date of Birth: "</string>
+    <string name="txt_driver_blood_group">"Blood Group: "</string>
+    <string name="txt_driver_phone_number">"Phone Number: "</string>
+    <string name="txt_license_number">"License Number: "</string>
+    <string name="txt_license_class">"License Class: "</string>
+    <string name="txt_license_doi">"License Date of Issue: "</string>
+    <string name="txt_license_doe">"License Date of Expiry: "</string>
+    <string name="txt_license_soi">"License State of Issue: "</string>
+    <string name="txt_driver_nok_name">"Next of Kin Name: "</string>
+    <string name="txt_driver_nok_phone_number">"Next of Kin Phone Number: "</string>
+    <string name="btn_okay">Okay</string>
+    <string name="splash_image_description">Splash Screen</string>
+    <string name="submit">Submit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in_subtitle">Enter Login Credentials</string>
+    <string name="sign_in_email">Email</string>
+    <string name="sign_in_password">Password</string>
+    <string name="account_log_in_forgot_password_prompt">Forgot Password</string>
+    <string name="sign_in_title">Sign In</string>
+    <string name="new_here">New Here?</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="sign_up_subtitle">Enter Details To Register</string>
+    <string name="sign_in_username">Full Name</string>
+    <string name="sign_up_username">Full Name</string>
+    <string name="sign_up_confirm_password">Confirm Password</string>
+    <string name="no_of_children">No of Children</string>
+    <string name="email_invalid">Email not valid</string>
+    <string name="fullname_error">Fullname is required</string>
+    <string name="invalid_password">Password must contain 1 digit, uppercase, lowercase, special character and 8 characters</string>
+    <string name="invalid_confirm_password">Password does not match</string>
+    <string name="add_kids_title">Add Kids</string>
+    <string name="add_kids_subtitle">Enter Details Of Your Kids</string>
+    <string name="add_kids_btn">Add Kids</string>
+    <string name="add_child_1_heading">Child 1</string>
+    <string name="add_child_2_heading">Child 2</string>
+    <string name="add_child_3_heading">Child 3</string>
+    <string name="child_name">Child Name</string>
+    <string name="child_age">Child Age</string>
+    <string name="child_name_error">Child name is required</string>
+    <string name="action_logout">Log Out</string>
+    <string name="choose_difficulty">Select Difficulty</string>
+    <string name="easy">Easy</string>
+    <string name="high_score">H/Score</string>
+    <string name="leaderboard_rank">L/B Rank:</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="home_random_difficulty_btn">Choose Random</string>
+    <string name="action_leaderboard">Leaderboard</string>
+    <string name="parent_children_title">My %s Children</string>
+    <string name="start_quiz">Start Game</string>
+    <string name="stats">Stats</string>
+    <string name="game_score">%s Points</string>
+    <string name="last_score">Last Score</string>
+    <string name="last_played">Last Played</string>
+    <string name="rules_title">Rules</string>
+    <string name="instruction_title">Instruction</string>
+    <string name="hint_description">Description</string>
+    <string name="word_counter">Words: %s / %s</string>
+    <string name="player_score">Score: %s</string>
+    <string name="next">Next</string>
+    <string name="correct_word">Correct Spelling: %s</string>
+    <string name="finish">Finish</string>
+    <string name="game_over">Game Over</string>
+    <string name="correct_words_title">"Correct Words: "</string>
+    <string name="wrong_words_title">Wrong Words: </string>
+    <string name="total_score">"Total Score: "</string>
+    <string name="total_words">"Total Words: "</string>
+    <string name="difficulty">"Difficulty: "</string>
+    <string name="high_score_full">"High Score: "</string>
+    <string name="points_text">%s Points</string>
+    <string name="total_words_text">%s Words</string>
+    <string name="new_high_score">%s (New) 🥳</string>
+    <string name="last_score_short">"L/ Score: "</string>
+
+    <string-array name="children_age">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+    </string-array>
+</resources>

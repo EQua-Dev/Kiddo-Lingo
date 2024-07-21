@@ -1,0 +1,287 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/kiddo_lingo_background_screen"
+    tools:context=".ui.auth.AddKids">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/add_kids_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="@dimen/dimen_32"
+            android:fontFamily="@font/jmdh_regular"
+            android:text="@string/add_kids_title"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_kids_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="@dimen/dimen_32"
+            android:fontFamily="@font/jacques_francois_shadow_regular"
+            android:text="@string/add_kids_subtitle"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:strokeColor="@color/electric_blue"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:id="@+id/card_sign_in"
+            android:layout_marginHorizontal="@dimen/margin_midi"
+            android:padding="@dimen/padding_midi"
+            app:cardElevation="@dimen/dimen_4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_4"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/electric_blue"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    android:id="@+id/child_1_card"
+                    android:layout_marginVertical="@dimen/padding_mini"
+                    android:layout_marginHorizontal="@dimen/margin_mini"
+                    android:padding="@dimen/padding_mini"
+                    app:cardElevation="@dimen/dimen_4">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_4"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_child_1_heading"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="@dimen/padding_midi"
+                            android:textSize="@dimen/text_l"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_layout_child_1_name"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/padding_mini"
+                            android:hint="@string/child_name"
+                            app:boxStrokeColor="@color/electric_blue"
+                            app:hintTextColor="@color/electric_blue">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/child_1_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/child_name"
+                                android:importantForAutofill="no"
+                                android:inputType="textPersonName"
+                                android:labelFor="@id/child_1_name" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_layout_child_1_age"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/padding_mini"
+                            app:boxStrokeColor="@color/electric_blue"
+                            app:hintTextColor="@color/electric_blue"
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/child_1_age"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/child_age"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/electric_blue"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    android:id="@+id/child_2_card"
+                    android:layout_marginVertical="@dimen/padding_mini"
+                    android:layout_marginHorizontal="@dimen/margin_mini"
+                    android:visibility="gone"
+                    android:padding="@dimen/padding_mini"
+                    app:cardElevation="@dimen/dimen_4">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_child_2_heading"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="@dimen/padding_midi"
+                            android:textSize="@dimen/text_l"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_layout_child_2_name"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/padding_mini"
+                            android:hint="@string/child_name"
+                            app:boxStrokeColor="@color/electric_blue"
+                            app:hintTextColor="@color/electric_blue">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/child_2_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/sign_in_email"
+                                android:importantForAutofill="no"
+                                android:inputType="textPersonName"
+                                android:labelFor="@id/child_2_name" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_layout_child_2_age"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/padding_mini"
+                            app:boxStrokeColor="@color/electric_blue"
+                            app:hintTextColor="@color/electric_blue"
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/child_2_age"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/child_age"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:strokeColor="@color/electric_blue"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    android:id="@+id/child_3_card"
+                    android:layout_marginHorizontal="@dimen/margin_mini"
+                    android:padding="@dimen/padding_mini"
+                    android:visibility="gone"
+                    android:layout_marginVertical="@dimen/padding_mini"
+                    app:cardElevation="@dimen/dimen_4">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_4"
+                        android:orientation="vertical"
+                        android:id="@+id/child_1_layout">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_child_3_heading"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="@dimen/padding_midi"
+                            android:textSize="@dimen/text_l"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_layout_child_3_name"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/padding_mini"
+                            android:hint="@string/child_name"
+                            app:boxStrokeColor="@color/electric_blue"
+                            app:hintTextColor="@color/electric_blue">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/child_3_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/sign_in_email"
+                                android:importantForAutofill="no"
+                                android:inputType="text"
+                                android:labelFor="@id/child_3_name" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_layout_child_3_age"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/padding_mini"
+                            app:boxStrokeColor="@color/electric_blue"
+                            app:hintTextColor="@color/electric_blue">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/child_3_age"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/child_age"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_kids_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/electric_blue"
+            android:padding="@dimen/padding_mini"
+            android:layout_margin="@dimen/margin_midi"
+            android:text="@string/add_kids_btn"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/padding_midi" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

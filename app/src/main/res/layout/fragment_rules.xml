@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.game.Rules">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_rules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_mini"
+        android:padding="@dimen/padding_mini"
+        app:cardBackgroundColor="@color/green">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txt_quiz_category_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_mini"
+                android:fontFamily="@font/jacques_francois_shadow_regular"
+                android:padding="@dimen/padding_mini"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_l"
+                tools:text="@string/easy" />
+
+            <LinearLayout
+                android:id="@+id/game_stats_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_quiz_category_title"
+                android:layout_margin="@dimen/margin_mini"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_mini">
+
+                <TextView
+                    android:id="@+id/category_short_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:padding="@dimen/padding_mini"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_l"
+                    tools:text="Simple words for beginners." />
+
+                <TextView
+                    android:id="@+id/category_long_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:padding="@dimen/padding_mini"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_l"
+                    tools:text="These words are commonly encountered in early childhood education and are typically easy to spell. Perfect for young children who are just starting to learn spelling." />
+
+                <TextView
+                    android:id="@+id/instruction_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jacques_francois_shadow_regular"
+                    android:padding="@dimen/padding_mini"
+                    android:text="@string/instruction_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_l" />
+
+                <TextView
+                    android:id="@+id/category_instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jmdh_regular"
+                    android:padding="@dimen/padding_mini"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_l"
+                    tools:text="Listen to the word pronounced, then write the word on the screen using your finger or stylus. \nTap submit when you're done." />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <LinearLayout
+        android:id="@+id/layout_rules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_rules"
+        android:layout_marginHorizontal="@dimen/margin_midi"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txt_quiz_rules_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_mini"
+            android:padding="@dimen/padding_mini"
+            android:text="@string/stats"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_l" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_mini"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/last_played" />
+
+            <TextView
+                android:id="@+id/last_played_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="@tools:sample/date/ddmmyy" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_mini"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/last_score" />
+
+            <TextView
+                android:id="@+id/last_played_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="@string/game_score" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_mini"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/high_score" />
+
+            <TextView
+                android:id="@+id/high_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                tools:text="@string/game_score" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_quiz_btn"
+        android:layout_width="@dimen/button_width_xxl"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin_mini"
+        android:padding="@dimen/padding_mini"
+        android:text="@string/start_quiz"
+        app:backgroundTint="@color/green"
+        app:cornerRadius="@dimen/margin_mini" />
+
+</RelativeLayout>
