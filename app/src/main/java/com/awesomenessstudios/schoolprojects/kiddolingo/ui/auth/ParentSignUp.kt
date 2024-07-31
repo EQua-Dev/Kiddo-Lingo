@@ -1,6 +1,7 @@
 package com.awesomenessstudios.schoolprojects.kiddolingo.ui.auth
 
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
@@ -53,7 +54,7 @@ class ParentSignUp : Fragment() {
 
         authViewModel = ViewModelProvider(requireActivity()).get(AuthViewModel::class.java)
 
-        with(binding){
+        with(binding) {
             txtNoOfChildren.text = noOfChildren.toString()
             createAccountLogIn.setOnClickListener {
                 val navToSignIn = ParentSignUpDirections.actionParentSignUpToParentSignIn()
@@ -62,10 +63,11 @@ class ParentSignUp : Fragment() {
 
             signUpUsername.setOnFocusChangeListener { _, hasFocus ->
                 fullName = signUpUsername.text.toString().trim()
-                if (!hasFocus){
-                    if (fullName.isEmpty()){
-                        textInputLayoutSignUpUsername.error = resources.getString(R.string.fullname_error)
-                    }else{
+                if (!hasFocus) {
+                    if (fullName.isEmpty()) {
+                        textInputLayoutSignUpUsername.error =
+                            resources.getString(R.string.fullname_error)
+                    } else {
                         fullNameOkay = true
                         textInputLayoutSignUpUsername.error = null
                     }
@@ -87,16 +89,16 @@ class ParentSignUp : Fragment() {
             }
 
             btnMinusNoOfChildren.setOnClickListener {
-                if (noOfChildren >= 1 && noOfChildren != 1){
+                if (noOfChildren >= 1 && noOfChildren != 1) {
                     noOfChildren -= 1
                     txtNoOfChildren.text = noOfChildren.toString()
                 }
             }
 
             btnPlusNoOfChildren.setOnClickListener {
-                if (noOfChildren == 3){
+                if (noOfChildren == 3) {
                     requireContext().toast("Max of 3 children allowed")
-                }else{
+                } else {
                     noOfChildren += 1
                     txtNoOfChildren.text = noOfChildren.toString()
                 }
@@ -133,33 +135,36 @@ class ParentSignUp : Fragment() {
                 if (fullNameOkay &&
                     emailOkay &&
                     passwordOkay &&
-                    confirmPasswordOkay){
+                    confirmPasswordOkay
+                ) {
                     fullName = signUpUsername.text.toString().trim()
                     email = signUpEmail.text.toString().trim()
 
-                    authViewModel.createParent(email, password, fullName, noOfChildren)
-                    authViewModel.authStateLiveData.observe(
-                        viewLifecycleOwner,
-                        Observer { response ->
-                            when (response) {
-                                is DataResult.Loading -> {
-                                    requireContext().showProgress()
-                                }
-
-                                is DataResult.Failure -> {
-                                    hideProgress()
-                                    requireContext().toast(response.error)
-                                }
-
-                                is DataResult.Success -> {
-                                    hideProgress()
-                                    val navToAddKids = ParentSignUpDirections.actionParentSignUpToAddKids(noOfChildren)
-                                    findNavController().navigate(navToAddKids)
-                                }
+                    authViewModel.createParent(
+                        email,
+                        password,
+                        fullName,
+                        noOfChildren,
+                        onLoading = {
+                            if (it) {
+                                requireActivity().showProgress()
+                            } else {
+                                hideProgress()
                             }
 
-                        })
+                        },
+                        onAccountCreated = {
 
+                            val navToAddKids =
+                                ParentSignUpDirections.actionParentSignUpToAddKids(
+                                    noOfChildren
+                                )
+                            findNavController().navigate(navToAddKids)
+                        },
+                        onAccountNotCreated = {
+                            requireContext().toast(it)
+
+                        })
                     //createUser(email, password)
                 }
             }

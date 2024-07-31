@@ -39,9 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            app:strokeColor="@color/electric_blue"
-            app:strokeWidth="1dp"
-            app:cardBackgroundColor="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/white"
             android:id="@+id/card_sign_in"
             android:layout_marginHorizontal="@dimen/margin_midi"
             android:padding="@dimen/padding_midi"
@@ -56,14 +54,12 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:strokeColor="@color/electric_blue"
                     app:strokeWidth="1dp"
                     app:cardBackgroundColor="@android:color/transparent"
                     android:id="@+id/child_1_card"
                     android:layout_marginVertical="@dimen/padding_mini"
                     android:layout_marginHorizontal="@dimen/margin_mini"
-                    android:padding="@dimen/padding_mini"
-                    app:cardElevation="@dimen/dimen_4">
+                    android:padding="@dimen/padding_mini">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

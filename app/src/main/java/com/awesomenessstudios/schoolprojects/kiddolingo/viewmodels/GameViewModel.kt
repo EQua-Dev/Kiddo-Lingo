@@ -12,6 +12,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
 
 class GameViewModel : ViewModel() {
 
@@ -29,8 +30,18 @@ class GameViewModel : ViewModel() {
 
 
     private val TAG = "GameViewModels"
-    fun getWords(category: String, difficulty: String) {
-        _quizWordsLiveData.value = DataResult.Loading
+    fun getWords(
+        category: String,
+        difficulty: String,
+        onLoading: (Boolean) -> Unit,
+        onWordsFetched: (List<Word>) -> Unit,
+        onWordsNotFetched: (String) -> Unit
+    ) = CoroutineScope(Dispatchers.IO).launch {
+
+        withContext(Dispatchers.Main){
+            onLoading(true)
+        }
+
         Common.quizCollectionRef.document(category).collection(difficulty).get()
             .addOnCompleteListener {
                 val words = mutableListOf<Word>()
@@ -40,8 +51,7 @@ class GameViewModel : ViewModel() {
                     words.add(quizWord!!)
                     Log.d(TAG, "getWords: $words")
                 }
-                _quizWordsLiveData.value = DataResult.Success(words.shuffled())
-
+                    onWordsFetched(words.shuffled())
             }
     }
 
